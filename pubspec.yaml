@@ -74,6 +74,7 @@ dependencies:
   rating_dialog: ^2.0.4
   drop_down_list: ^0.0.8
   file_picker: ^8.1.4
+  change_app_package_name: ^1.4.0
 
 dev_dependencies:
   flutter_test:

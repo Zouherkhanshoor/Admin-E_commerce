@@ -34,13 +34,13 @@ showbottommenu(imageUploadCamera(), fileUploadGallery()) {
       Directionality(
           textDirection: TextDirection.rtl,
           child: Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             height: 200,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Container(
-                  child: const Text(
+                const SizedBox(
+                  child: Text(
                     "Choose image",
                     style: TextStyle(
                         fontSize: 22,
@@ -60,7 +60,7 @@ showbottommenu(imageUploadCamera(), fileUploadGallery()) {
                     Icons.camera_alt_outlined,
                     size: 40,
                   ),
-                  title: Text(
+                  title: const Text(
                     "image From Camera",
                     style: TextStyle(fontSize: 20),
                   ),
@@ -74,7 +74,7 @@ showbottommenu(imageUploadCamera(), fileUploadGallery()) {
                     Icons.camera_alt_outlined,
                     size: 40,
                   ),
-                  title: Text(
+                  title: const Text(
                     "image From Galery",
                     style: TextStyle(fontSize: 20),
                   ),

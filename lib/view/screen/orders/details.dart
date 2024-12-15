@@ -96,7 +96,7 @@ class OrdersDetails extends StatelessWidget {
                         ),
                         if (controller.ordersmodel.ordersType == "0")
                           Card(
-                            child: Container(
+                            child: SizedBox(
                               child: ListTile(
                                 title: const Text(
                                   "Shipping Address",

@@ -2,9 +2,7 @@ import 'package:get/get.dart';
 import 'package:test_app/core/class/status_request.dart';
 import 'package:test_app/core/constant/routes.dart';
 import 'package:test_app/core/functions/handlingdatacontroller.dart';
-import 'package:test_app/data/datasource/remote/categories_data.dart';
 import 'package:test_app/data/datasource/remote/items_data.dart';
-import 'package:test_app/data/model/categoriesmodel.dart';
 import 'package:test_app/data/model/itemsmodel.dart';
 
 class ItemsController extends GetxController {
@@ -33,7 +31,7 @@ class ItemsController extends GetxController {
     update();
   }
 
-  deleteCategory(String id, String imagename) {
+  deleteItems(String id, String imagename) {
     itemsData.deleteData({"id": id, "imagename": imagename});
     data.removeWhere((element) => element.itemsId == id);
     update();

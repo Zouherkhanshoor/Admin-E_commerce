@@ -48,8 +48,7 @@ class OrdersAcceptedController extends GetxController {
     data.clear();
     statusRequest = StatusRequest.loading;
     update();
-    var response = await ordersAcceptedData
-        .getData(myServices.sharedPreferences.getString("id")!);
+    var response = await ordersAcceptedData.getData();
     print("===============================controller $response ");
 
     statusRequest = handlingData(response);
@@ -64,11 +63,12 @@ class OrdersAcceptedController extends GetxController {
     update();
   }
 
-  donedelivery(String ordersid, String usersid) async {
+  doneprepare(String ordersid, String usersid, String orderstype) async {
     data.clear();
     statusRequest = StatusRequest.loading;
     update();
-    var response = await ordersAcceptedData.doneDeliveryData(ordersid, usersid);
+    var response =
+        await ordersAcceptedData.donePrepare(ordersid, usersid, orderstype);
     print("===============================controller $response ");
 
     statusRequest = handlingData(response);

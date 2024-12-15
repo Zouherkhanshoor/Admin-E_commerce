@@ -14,7 +14,7 @@ class _TestState extends State<Test> {
   var res;
   initialdata() async {
     res = await checkinternet();
-    print(res);
+    // print(res);
   }
 
   @override
@@ -38,7 +38,7 @@ class _TestState extends State<Test> {
               fieldWidth: 50.0,
               borderRadius: BorderRadius.circular(20),
               numberOfFields: 5,
-              borderColor: Color(0xFF512DA8),
+              borderColor: const Color(0xFF512DA8),
               //set to true to show as box or false to show as dash
               showFieldAsBox: true,
               //runs when a code is typed in

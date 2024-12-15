@@ -20,13 +20,13 @@ class CategoriesModel {
     categoiresDatetime = json['categoires_datetime'];
   }
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['categoires_id'] = this.categoiresId;
-    data['categoires_name'] = this.categoiresName;
-    data['categoires_name_ar'] = this.categoiresNameAr;
-    data['categoires_image'] = this.categoiresImage;
-    data['categoires_datetime'] = this.categoiresDatetime;
-    return data;
-  }
+  // Map<String, dynamic> toJson() {
+  //   final Map<String, dynamic> data = new Map<String, dynamic>();
+  //   data['categoires_id'] = this.categoiresId;
+  //   data['categoires_name'] = this.categoiresName;
+  //   data['categoires_name_ar'] = this.categoiresNameAr;
+  //   data['categoires_image'] = this.categoiresImage;
+  //   data['categoires_datetime'] = this.categoiresDatetime;
+  //   return data;
+  // }
 }

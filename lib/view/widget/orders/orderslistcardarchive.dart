@@ -64,7 +64,7 @@ class CardOrdersListArchive extends GetView<OrdersArchiveController> {
                   textColor: Colors.white,
                   child: const Text("Details"),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 if (listdata.ordersRating == "0")
                   MaterialButton(
                     onPressed: () {},

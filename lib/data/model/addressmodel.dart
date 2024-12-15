@@ -26,15 +26,15 @@ class AddressModel {
     addressLang = json['address_lang'];
   }
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['address_id'] = this.addressId;
-    data['address_usersid'] = this.addressUsersid;
-    data['address_name'] = this.addressName;
-    data['address_city'] = this.addressCity;
-    data['address_street'] = this.addressStreet;
-    data['address_lat'] = this.addressLat;
-    data['address_lang'] = this.addressLang;
-    return data;
-  }
+  // Map<String, dynamic> toJson() {
+  //   final Map<String, dynamic> data = new Map<String, dynamic>();
+  //   data['address_id'] = this.addressId;
+  //   data['address_usersid'] = this.addressUsersid;
+  //   data['address_name'] = this.addressName;
+  //   data['address_city'] = this.addressCity;
+  //   data['address_street'] = this.addressStreet;
+  //   data['address_lat'] = this.addressLat;
+  //   data['address_lang'] = this.addressLang;
+  //   return data;
+  // }
 }

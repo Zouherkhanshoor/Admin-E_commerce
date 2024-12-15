@@ -15,6 +15,7 @@ import 'package:test_app/view/screen/items/edit.dart';
 import 'package:test_app/view/screen/items/view.dart';
 import 'package:test_app/view/screen/language.dart';
 import 'package:test_app/view/screen/orders/details.dart';
+import 'package:test_app/view/screen/orders/screen.dart';
 
 List<GetPage<dynamic>>? routes = [
   GetPage(
@@ -40,4 +41,8 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoute.itemsview, page: () => const ItemsView()),
   GetPage(name: AppRoute.itemsadd, page: () => const ItemsAdd()),
   GetPage(name: AppRoute.itemsedit, page: () => const ItemsEdit()),
+
+  // ===========Orders
+
+  GetPage(name: AppRoute.ordershome, page: () => const OrdersScreen()),
 ];

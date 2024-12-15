@@ -8,10 +8,10 @@ class MyServices extends GetxService {
   Future<MyServices> init() async {
     await Firebase.initializeApp(
         options: const FirebaseOptions(
-      apiKey: 'AIzaSyDEUgpIpLb163U8u3-4CoFpN8xx6I7MBWE',
-      appId: '1:29731391392:android:863f8f776b09f4329886c5',
-      messagingSenderId: '29731391392',
-      projectId: 'ecommerce-80185',
+      apiKey: 'AIzaSyA5rOPIU85QES3aEcIsrSCvJUpvuzthJec',
+      appId: '1:785476671716:android:8168072e686d5600a0f4f1',
+      messagingSenderId: '785476671716',
+      projectId: 'projectecommerce-7c191',
       storageBucket: 'myapp-b9yt18.appspot.com',
     ));
     sharedPreferences = await SharedPreferences.getInstance();

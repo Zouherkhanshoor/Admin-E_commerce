@@ -1,6 +1,8 @@
 import 'dart:io';
 
+import 'package:dartz/dartz.dart';
 import 'package:test_app/core/class/crud.dart';
+import 'package:test_app/core/class/status_request.dart';
 import 'package:test_app/linkapi.dart';
 
 class ItemsData {
@@ -20,7 +22,7 @@ class ItemsData {
   }
 
   editData(Map data, [File? file]) async {
-    var response;
+    Either<StatusRequest, Map> response;
     if (file == null) {
       response = await crud.postData(AppLink.itemsedit, data);
     } else {

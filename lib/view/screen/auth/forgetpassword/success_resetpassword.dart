@@ -36,7 +36,7 @@ class SuccessResetPassword extends StatelessWidget {
             Text("37".tr, style: Theme.of(context).textTheme.headlineLarge),
             Text("38".tr),
             const Spacer(),
-            Container(
+            SizedBox(
               width: double.infinity,
               child: CustomButtonAuth(
                 text: "31".tr,

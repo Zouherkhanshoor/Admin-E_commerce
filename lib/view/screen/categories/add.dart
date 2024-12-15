@@ -58,7 +58,7 @@ class CategoriesAdd extends StatelessWidget {
                           if (controller.file != null)
                             Image.file(controller.file!),
                           CustomButton(
-                            text: "Add Image",
+                            text: "Add Category",
                             onPressed: () {
                               controller.addData();
                             },

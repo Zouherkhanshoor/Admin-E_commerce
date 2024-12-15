@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/controller/orders/accepted_controller.dart';
-import 'package:test_app/controller/orders/pending_controller.dart';
 import 'package:test_app/core/constant/color.dart';
 import 'package:test_app/core/constant/routes.dart';
 import 'package:test_app/data/model/ordersmodel.dart';
@@ -66,12 +65,11 @@ class CardOrdersListAccepted extends GetView<OrdersAcceptedController> {
                   child: const Text("Details"),
                 ),
                 const SizedBox(width: 10),
-                if (listdata.ordersStatus! == "3")
+                if (listdata.ordersStatus == "1")
                   MaterialButton(
                     onPressed: () {
-                      // controller.deleteOrders(listdata.ordersId!);
-                      controller.donedelivery(
-                          listdata.ordersId!, listdata.ordersUsersid!);
+                      controller.doneprepare(listdata.ordersId!,
+                          listdata.ordersUsersid!, listdata.ordersType!);
                     },
                     color: AppColor.thirdcolor,
                     textColor: AppColor.secoundcolor,

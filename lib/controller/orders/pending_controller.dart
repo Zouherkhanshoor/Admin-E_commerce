@@ -1,4 +1,3 @@
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:test_app/core/class/status_request.dart';
 import 'package:test_app/core/functions/handlingdatacontroller.dart';
 import 'package:test_app/core/services/services.dart';
@@ -69,8 +68,7 @@ class OrdersPendingController extends GetxController {
     data.clear();
     statusRequest = StatusRequest.loading;
     update();
-    var response = await ordersPendingData.approveorderData(
-        myServices.sharedPreferences.getString("id")!, usersid, ordersid);
+    var response = await ordersPendingData.approveorderData(usersid, ordersid);
     print("===============================controller $response ");
 
     statusRequest = handlingData(response);

@@ -62,26 +62,26 @@ class ItemsModel {
     favorite = json['favorite'];
   }
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['items_id'] = this.itemsId;
-    data['items_name'] = this.itemsName;
-    data['items_name_ar'] = this.itemsNameAr;
-    data['items_desc'] = this.itemsDesc;
-    data['items_desc_ar'] = this.itemsDescAr;
-    data['items_image'] = this.itemsImage;
-    data['items_count'] = this.itemsCount;
-    data['items_active'] = this.itemsActive;
-    data['items_price'] = this.itemsPrice;
-    data['items_discount'] = this.itemsDiscount;
-    data['items_date'] = this.itemsDate;
-    data['items_cat'] = this.itemsCat;
-    data['categoires_id'] = this.categoiresId;
-    data['categoires_name'] = this.categoiresName;
-    data['categoires_name_ar'] = this.categoiresNameAr;
-    data['categoires_image'] = this.categoiresImage;
-    data['categoires_datetime'] = this.categoiresDatetime;
-    data['favorite'] = this.favorite;
-    return data;
-  }
+  // Map<String, dynamic> toJson() {
+  //   final Map<String, dynamic> data = new Map<String, dynamic>();
+  //   data['items_id'] = this.itemsId;
+  //   data['items_name'] = this.itemsName;
+  //   data['items_name_ar'] = this.itemsNameAr;
+  //   data['items_desc'] = this.itemsDesc;
+  //   data['items_desc_ar'] = this.itemsDescAr;
+  //   data['items_image'] = this.itemsImage;
+  //   data['items_count'] = this.itemsCount;
+  //   data['items_active'] = this.itemsActive;
+  //   data['items_price'] = this.itemsPrice;
+  //   data['items_discount'] = this.itemsDiscount;
+  //   data['items_date'] = this.itemsDate;
+  //   data['items_cat'] = this.itemsCat;
+  //   data['categoires_id'] = this.categoiresId;
+  //   data['categoires_name'] = this.categoiresName;
+  //   data['categoires_name_ar'] = this.categoiresNameAr;
+  //   data['categoires_image'] = this.categoiresImage;
+  //   data['categoires_datetime'] = this.categoiresDatetime;
+  //   data['favorite'] = this.favorite;
+  //   return data;
+  // }
 }

@@ -65,10 +65,9 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                   child: const Text("Details"),
                 ),
                 const SizedBox(width: 10),
-                if (listdata.ordersStatus! == "2")
+                if (listdata.ordersStatus! == "0")
                   MaterialButton(
                     onPressed: () {
-                      // controller.deleteOrders(listdata.ordersId!);
                       controller.approveOrders(
                           listdata.ordersUsersid!, listdata.ordersId!);
                     },

@@ -25,14 +25,17 @@ class AppLink {
   static const String homepage = "$server/home.php";
 
   // ==================Orders
+  static const String approveOrders = "$server/admin/orders/approve.php";
+  static const String prepare = "$server/admin/orders/prepare.php";
 
-  static const String viewpendingOrders = "$server/delivery/orders/pending.php";
+  static const String viewarchiveOrders = "$server/admin/orders/archive.php";
+
+  static const String viewpendingOrders =
+      "$server/admin/orders/viewpending.php";
   static const String viewacceptedOrders =
-      "$server/delivery/orders/accepted.php";
-  static const String approveOrders = "$server/delivery/orders/approve.php";
-  static const String viewarchiveOrders = "$server/delivery/orders/archive.php";
-  static const String detailsOrders = "$server/delivery/orders/details.php";
-  static const String doneOrders = "$server/delivery/orders/done.php";
+      "$server/admin/orders/viewaccepted.php";
+  static const String detailsOrders = "$server/admin/orders/details.php";
+
   // ==================categories
 
   static const String categoriesview = "$server/admin/categories/view.php";

@@ -20,7 +20,7 @@ class CategoriesView extends StatelessWidget {
           onPressed: () {
             Get.toNamed(AppRoute.categoriesadd);
           },
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
         ),
         body: GetBuilder<CategoriesController>(
             builder: (controller) => HandlingDataView(
@@ -35,57 +35,63 @@ class CategoriesView extends StatelessWidget {
                     child: ListView.builder(
                       itemCount: controller.data.length,
                       itemBuilder: (context, index) {
-                        return Card(
-                            child: Row(
-                          children: [
-                            Expanded(
-                                flex: 2,
-                                child: Container(
-                                  padding: EdgeInsets.all(4),
-                                  child: CachedNetworkImage(
-                                      height: 100,
-                                      imageUrl:
-                                          "${AppLink.imageCategories}/${controller.data[index].categoiresImage}"),
-                                )),
-                            Expanded(
-                                flex: 4,
-                                child: ListTile(
-                                  trailing: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        IconButton(
-                                            onPressed: () {
-                                              controller.goToPageEdit(
-                                                  controller.data[index]);
-                                            },
-                                            icon: const Icon(Icons.edit)),
-                                        IconButton(
-                                            onPressed: () {
-                                              Get.defaultDialog(
-                                                title: "Warning",
-                                                middleText:
-                                                    "Are you sure to delete category",
-                                                onCancel: () {},
-                                                onConfirm: () {
-                                                  controller.deleteCategory(
-                                                      controller.data[index]
-                                                          .categoiresId!,
-                                                      controller.data[index]
-                                                          .categoiresImage!);
-                                                  Get.back();
-                                                },
-                                              );
-                                            },
-                                            icon: const Icon(
-                                                Icons.delete_outline)),
-                                      ]),
-                                  subtitle: Text(controller
-                                      .data[index].categoiresDatetime!),
-                                  title: Text(
-                                      controller.data[index].categoiresName!),
-                                )),
-                          ],
-                        ));
+                        return InkWell(
+                          onLongPress: () {
+                            Get.defaultDialog(
+                              title: "Warning",
+                              middleText: " you are going to Edit category",
+                              onCancel: () {},
+                              onConfirm: () {
+                                controller.goToPageEdit(controller.data[index]);
+                              },
+                            );
+                          },
+                          child: Card(
+                              child: Row(
+                            children: [
+                              Expanded(
+                                  flex: 2,
+                                  child: Container(
+                                    padding: const EdgeInsets.all(4),
+                                    child: CachedNetworkImage(
+                                        height: 100,
+                                        imageUrl:
+                                            "${AppLink.imageCategories}/${controller.data[index].categoiresImage}"),
+                                  )),
+                              Expanded(
+                                  flex: 4,
+                                  child: ListTile(
+                                    trailing: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          IconButton(
+                                              onPressed: () {
+                                                Get.defaultDialog(
+                                                  title: "Warning",
+                                                  middleText:
+                                                      "Are you sure to delete category",
+                                                  onCancel: () {},
+                                                  onConfirm: () {
+                                                    controller.deleteCategory(
+                                                        controller.data[index]
+                                                            .categoiresId!,
+                                                        controller.data[index]
+                                                            .categoiresImage!);
+                                                    Get.back();
+                                                  },
+                                                );
+                                              },
+                                              icon: const Icon(
+                                                  Icons.delete_outline)),
+                                        ]),
+                                    subtitle: Text(controller
+                                        .data[index].categoiresDatetime!),
+                                    title: Text(
+                                        controller.data[index].categoiresName!),
+                                  )),
+                            ],
+                          )),
+                        );
                       },
                     ),
                   ),

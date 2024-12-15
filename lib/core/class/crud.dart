@@ -61,7 +61,7 @@ class Crud {
     // For get Response Body
     var response = await http.Response.fromStream(myrequest);
     if (response.statusCode == 200 || response.statusCode == 201) {
-      print(response.body);
+      // print(response.body);
       Map responsebody = jsonDecode(response.body);
       return Right(responsebody);
     } else {

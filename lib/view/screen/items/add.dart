@@ -1,3 +1,4 @@
+import 'package:drop_down_list/model/selected_list_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_app/controller/categories/add_controller.dart';
@@ -6,6 +7,7 @@ import 'package:test_app/core/class/handlingdataview.dart';
 import 'package:test_app/core/constant/color.dart';
 import 'package:test_app/core/functions/validinput.dart';
 import 'package:test_app/core/shared/custombutton.dart';
+import 'package:test_app/core/shared/customdropdownsearch.dart';
 import 'package:test_app/core/shared/customtextformglobal.dart';
 
 class ItemsAdd extends StatelessWidget {
@@ -49,7 +51,7 @@ class ItemsAdd extends StatelessWidget {
                               hinttext: "description name ( English )",
                               labeltext: "description name ( English )",
                               iconData: Icons.category,
-                              mycontroller: controller.name,
+                              mycontroller: controller.desc,
                               valid: (val) {
                                 return validInput(val!, 3, 30, "");
                               },
@@ -58,7 +60,7 @@ class ItemsAdd extends StatelessWidget {
                               hinttext: "description name ( Arabic )",
                               labeltext: "description name ( Arabic )",
                               iconData: Icons.category,
-                              mycontroller: controller.namear,
+                              mycontroller: controller.descar,
                               valid: (val) {
                                 return validInput(val!, 3, 30, "");
                               },
@@ -67,29 +69,34 @@ class ItemsAdd extends StatelessWidget {
                               hinttext: "Count  ",
                               labeltext: "Count ",
                               iconData: Icons.category,
-                              mycontroller: controller.name,
+                              mycontroller: controller.count,
                               valid: (val) {
-                                return validInput(val!, 3, 30, "");
+                                return validInput(val!, 1, 10, "");
                               },
-                              isNumber: false),
+                              isNumber: true),
                           CustomTextFormGlobal(
                               hinttext: "Price  ",
                               labeltext: "Price  ",
                               iconData: Icons.category,
-                              mycontroller: controller.namear,
+                              mycontroller: controller.price,
                               valid: (val) {
-                                return validInput(val!, 3, 30, "");
+                                return validInput(val!, 2, 20, "");
                               },
-                              isNumber: false),
+                              isNumber: true),
                           CustomTextFormGlobal(
                               hinttext: "Discount ",
                               labeltext: "Discount ",
                               iconData: Icons.category,
-                              mycontroller: controller.namear,
+                              mycontroller: controller.discount,
                               valid: (val) {
-                                return validInput(val!, 3, 30, "");
+                                return validInput(val!, 1, 30, "");
                               },
-                              isNumber: false),
+                              isNumber: true),
+                          CustomDropDownSearch(
+                              title: "Choose Category",
+                              listdata: controller.dropdownlist,
+                              dropDownSelectedName: controller.catname!,
+                              dropDownSelectedId: controller.catid!),
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
                             child: MaterialButton(
@@ -102,9 +109,13 @@ class ItemsAdd extends StatelessWidget {
                             ),
                           ),
                           if (controller.file != null)
-                            Image.file(controller.file!),
+                            Image.file(
+                              controller.file!,
+                              width: 200,
+                              height: 200,
+                            ),
                           CustomButton(
-                            text: "Add Image",
+                            text: "Add Item",
                             onPressed: () {
                               controller.addData();
                             },

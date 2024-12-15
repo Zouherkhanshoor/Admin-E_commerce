@@ -6,17 +6,16 @@ class OrdersAcceptedData {
 
   OrdersAcceptedData(this.crud);
 
-  getData(String deliveryid) async {
-    var response = await crud.postData(AppLink.viewacceptedOrders, {
-      "id": deliveryid,
-    });
+  getData() async {
+    var response = await crud.postData(AppLink.viewacceptedOrders, {});
     return response.fold((l) => l, (r) => r);
   }
 
-  doneDeliveryData(String ordersid, String usersid) async {
-    var response = await crud.postData(AppLink.doneOrders, {
+  donePrepare(String ordersid, String usersid, String orderstype) async {
+    var response = await crud.postData(AppLink.prepare, {
       "ordersid": ordersid,
       "usersid": usersid,
+      "orderstype": orderstype,
     });
     return response.fold((l) => l, (r) => r);
   }

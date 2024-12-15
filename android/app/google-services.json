@@ -1,26 +1,94 @@
 {
   "project_info": {
-    "project_number": "29731391392",
-    "project_id": "ecommerce-80185",
-    "storage_bucket": "ecommerce-80185.appspot.com"
+    "project_number": "785476671716",
+    "project_id": "projectecommerce-7c191",
+    "storage_bucket": "projectecommerce-7c191.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:29731391392:android:863f8f776b09f4329886c5",
+        "mobilesdk_app_id": "1:785476671716:android:0b15b3fc2101f158a0f4f1",
         "android_client_info": {
-          "package_name": "com.example.new_app"
+          "package_name": "com.example.flutter_application_1"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "785476671716-igdpadr3m7sgtbdc04jdk47n86fq41gf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyDEUgpIpLb163U8u3-4CoFpN8xx6I7MBWE"
+          "current_key": "AIzaSyA5rOPIU85QES3aEcIsrSCvJUpvuzthJec"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785476671716-igdpadr3m7sgtbdc04jdk47n86fq41gf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785476671716:android:8168072e686d5600a0f4f1",
+        "android_client_info": {
+          "package_name": "com.zouher.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785476671716-igdpadr3m7sgtbdc04jdk47n86fq41gf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5rOPIU85QES3aEcIsrSCvJUpvuzthJec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785476671716-igdpadr3m7sgtbdc04jdk47n86fq41gf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785476671716:android:d251a03226d6a81ca0f4f1",
+        "android_client_info": {
+          "package_name": "com.zouher.delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785476671716-igdpadr3m7sgtbdc04jdk47n86fq41gf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5rOPIU85QES3aEcIsrSCvJUpvuzthJec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785476671716-igdpadr3m7sgtbdc04jdk47n86fq41gf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
